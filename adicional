@@ -1,0 +1,14 @@
+npm init -y 
+npm install nodemon -D
+npm install express -E 
+
+
+and add on package.json:
+"dev": "nodemon index.js" 
+
+
+
+
+El .gitignore siempre con esto:
+**/node_modules
+**/package-lock.json
