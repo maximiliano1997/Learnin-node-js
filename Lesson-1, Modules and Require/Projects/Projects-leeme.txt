@@ -1,0 +1,13 @@
+Proyecto 1: Registro de Usuarios
+
+Crea un proyecto de registro de usuarios en Node.js utilizando módulos. Crea un módulo que maneje la lógica de registro y otro módulo que maneje la lógica de autenticación. Implementa la funcionalidad de registro de usuarios con nombre de usuario y contraseña, y permite la autenticación de usuarios registrados.
+
+Proyecto 2: Lista de Tareas (To-Do List)
+
+Desarrolla una aplicación de lista de tareas en Node.js utilizando módulos. Crea un módulo que maneje las operaciones de agregar, editar y eliminar tareas en una lista. Luego, crea un archivo principal que importe este módulo y permita a los usuarios interactuar con la lista de tareas a través de la línea de comandos.
+
+Proyecto 3: Gestión de Archivos
+
+Crea una aplicación en Node.js que permita a los usuarios organizar archivos en carpetas. Utiliza módulos para realizar operaciones de lectura y escritura en el sistema de archivos, como mover archivos a diferentes carpetas, copiar archivos, y eliminar archivos y carpetas. Proporciona una interfaz de línea de comandos para que los usuarios gestionen sus archivos de manera eficiente.
+
+Estos ejercicios y proyectos te ayudarán a aplicar los conceptos de módulos y require en Node.js y a construir aplicaciones prácticas. A medida que avances, podrás ampliar y personalizar estos proyectos para que se adapten a tus necesidades y objetivos de aprendizaje. ¡Diviértete programando!

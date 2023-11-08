@@ -1,0 +1,17 @@
+Lesson 1: Modules and Require
+
+In Node.js, modules are a fundamental part that allow you to organize your code and reuse funcionality in different parts of your application. Learning to work with modules is essential for effective development in Node.js
+
+1.1 Understanding Modules in Node.js
+
+Node.js uses a module system to organize code into different files and folders. Each Javascript file in Node.js is considered a module by default. Modules are used to encapsulate and export functions, variables, and objects for use in other files.
+
+1.2 Import and Export Modules
+
+To import functions or vairables from a module into another file. the 'require' keyword is used. Here is an example of how to import a function from another file:
+
+// Watch your Excercises 1 and 2 that are on Introduction.
+
+Exercise 1: Basic Modules
+
+Create two JavaScript files, one called greeting.js and one called goodbye.js. In the greeting.js file, define a function that prints a greeting. Then, import this function into the goodbye.js file and use it to print a goodbye.
