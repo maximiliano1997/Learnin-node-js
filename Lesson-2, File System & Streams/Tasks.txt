@@ -1,0 +1,31 @@
+Algunos ejercicios y proyectos prácticos que puedes realizar para poner en práctica los conceptos de la Lección 4 sobre sistemas de archivos y streams en Node.js:
+
+### Ejercicios:
+
+1. **Lectura y Escritura de Archivos:**
+   - Crea un programa que lea un archivo de texto, realice alguna manipulación simple en el contenido y luego escriba el resultado en otro archivo.
+
+2. **Operaciones Asíncronas:**
+   - Modifica el ejercicio anterior para utilizar las versiones asíncronas de las operaciones de lectura y escritura de archivos.
+
+3. **Lectura Eficiente con Streams:**
+   - Utiliza streams para leer un archivo grande línea por línea y realiza alguna acción con cada línea leída.
+
+4. **Escritura Eficiente con Streams:**
+   - Crea un programa que genere un archivo grande escribiendo datos en él utilizando streams.
+
+### Proyectos Prácticos:
+
+1. **Aplicación de Registro:**
+   - Desarrolla una aplicación que registre eventos en un archivo de log. Utiliza streams para gestionar la escritura de eventos de manera eficiente.
+
+2. **Procesador de Datos CSV:**
+   - Crea un programa que lea un archivo CSV utilizando streams, realice alguna manipulación en los datos y escriba el resultado en otro archivo CSV.
+
+3. **Servidor de Archivos Simple:**
+   - Crea un servidor simple que pueda entregar archivos estáticos. Utiliza streams para mejorar la eficiencia en la lectura y entrega de archivos.
+
+4. **Proyecto de Descarga de Imágenes:**
+   - Desarrolla un programa que descargue imágenes desde Internet y las guarde localmente utilizando streams para gestionar eficientemente la descarga y escritura de archivos.
+
+Recuerda que estos ejercicios y proyectos están diseñados para fortalecer tu comprensión de los conceptos. Puedes ajustarlos según tus preferencias y nivel de habilidad. ¡Buena codificación!

@@ -1,0 +1,17 @@
+Aquí tienes algunos proyectos prácticos que puedes realizar para poner en práctica los conceptos de la Lección 4 sobre sistemas de archivos y streams en Node.js:
+
+### Proyectos Prácticos:
+
+1. **Aplicación de Registro:**
+   - Desarrolla una aplicación que registre eventos en un archivo de log. Utiliza streams para gestionar la escritura de eventos de manera eficiente.
+
+2. **Procesador de Datos CSV:**
+   - Crea un programa que lea un archivo CSV utilizando streams, realice alguna manipulación en los datos y escriba el resultado en otro archivo CSV.
+
+3. **Servidor de Archivos Simple:**
+   - Crea un servidor simple que pueda entregar archivos estáticos. Utiliza streams para mejorar la eficiencia en la lectura y entrega de archivos.
+
+4. **Proyecto de Descarga de Imágenes:**
+   - Desarrolla un programa que descargue imágenes desde Internet y las guarde localmente utilizando streams para gestionar eficientemente la descarga y escritura de archivos.
+
+Recuerda que estos ejercicios y proyectos están diseñados para fortalecer tu comprensión de los conceptos. Puedes ajustarlos según tus preferencias y nivel de habilidad. ¡Buena codificación!

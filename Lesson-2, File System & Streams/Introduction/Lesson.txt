@@ -1,0 +1,52 @@
+Lesson 4: File System and Streams in Node.js
+
+
+WHY
+
+Uso de Sistema de Archivos en Node.js:
+
+Lectura y Escritura de Archivos:
+
+Lectura: Permite acceder al contenido de archivos, útil para cargar configuraciones, leer datos almacenados, etc.
+Escritura: Facilita la creación y actualización de archivos, como la generación de registros, logs o almacenamiento de datos.
+Operaciones Asíncronas:
+
+Las operaciones asíncronas permiten que el programa no se bloquee mientras espera la finalización de operaciones de lectura/escritura, lo que es esencial para aplicaciones eficientes y con capacidad de respuesta.
+Uso de Streams en Node.js:
+
+Eficiencia en el Manejo de Datos:
+
+Lectura Eficiente: Los streams permiten procesar grandes cantidades de datos en "trozos" o "chunks", en lugar de cargar todo el archivo en memoria. Esto es crucial para archivos enormes que no cabrían en la memoria RAM.
+Escritura Eficiente: Al igual que con la lectura, puedes escribir datos en pequeñas partes en lugar de cargar todo el contenido en memoria antes de escribirlo. Esto es especialmente útil cuando estás generando grandes conjuntos de datos.
+Eventos para la Gestión de Datos:
+
+Los streams emiten eventos que puedes utilizar para gestionar el flujo de datos. Por ejemplo, puedes realizar acciones cuando se lee un chunk (data event) o cuando se completa la operación (end event).
+Pipelines para Simplificar Operaciones:
+
+Los pipelines son secuencias de streams encadenados, lo que facilita la creación de flujos de trabajo complejos y la manipulación de datos de manera clara y concisa.
+Reducción de la Sobrecarga de Memoria:
+
+Los streams permiten manejar grandes conjuntos de datos sin cargar todo el contenido en memoria. Esto es beneficioso para aplicaciones que deben ser eficientes en términos de uso de recursos.
+En Resumen:
+
+El uso de sistemas de archivos y streams en Node.js permite desarrollar aplicaciones más eficientes, especialmente cuando se trabaja con grandes cantidades de datos o se necesita una capacidad de respuesta rápida. La asincronía y la gestión eficiente de la memoria son aspectos clave para el rendimiento de las aplicaciones Node.js.
+
+
+
+
+/////////////////////////////////
+Búsqueda que podrías utilizar en plataformas como YouTube para encontrar videos relevantes:
+
+Sistema de archivos en Node.js:
+"Node.js File System Tutorial"
+"Working with File System in Node.js"
+
+Streams en Node.js:
+"Node.js Streams Tutorial"
+"Understanding Streams in Node.js"
+
+Node.js Pipelines:
+"Node.js Streams and Pipelines Explained"
+"Node.js Stream Pipeline Tutorial"
+
+Al realizar estas búsquedas, es probable que encuentres tutoriales en video que cubran los conceptos y ejemplos que estás buscando. Asegúrate de revisar las valoraciones y comentarios para asegurarte de que el contenido sea de calidad y esté actualizado.

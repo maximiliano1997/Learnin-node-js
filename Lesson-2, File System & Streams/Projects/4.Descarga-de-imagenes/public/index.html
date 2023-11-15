@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+
+</head>
+
+<body>
+    <div id="mensaje"></div>
+
+    <script>
+        // Esta funcion se ejecutara cuando la pagina haya cargado completamente
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Realiza una solicitud al servidor para descarar la imagen
+            fetch('http://localhost:3000')
+                .then(response => response.text())
+                .then(message => {
+                    // Muestra el mensaje de descarga en el div con el id 'mensaje'
+                    document.getElementById('mensaje').innerText = message;
+
+                })
+                .catch(error => {
+                    console.error(`Error al realizar la solicitud al Servidor: `, error.message)
+                })
+        })
+    </script>
+</body>
+
+</html>
