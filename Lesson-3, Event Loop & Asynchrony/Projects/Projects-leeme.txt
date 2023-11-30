@@ -1,0 +1,106 @@
+Proyecto Práctico:
+Sistema de Registro de Usuarios
+Desarrolla un sistema simple de registro de usuarios utilizando Node.js y el modelo de concurrencia basado en eventos.
+
+1-Registro de Usuarios:
+
+Crea un formulario HTML simple para ingresar información de usuario como nombre, correo electrónico y contraseña.
+
+2-Manejo de Asincronía:
+
+Implementa la lógica del servidor en Node.js para manejar el registro de usuarios. Utiliza Promises o Async/Await para realizar operaciones asincrónicas, como la escritura de datos en un archivo.
+
+3-Validación de Datos:
+
+Agrega validación de datos para asegurarte de que la información ingresada sea válida (por ejemplo, dirección de correo electrónico válida y contraseña segura).
+
+4-Almacenamiento Seguro de Contraseñas:
+
+Utiliza bibliotecas como bcrypt para almacenar de manera segura las contraseñas de los usuarios en lugar de guardarlas en texto plano.
+
+5-Manejo de Sesiones:
+
+Implementa un sistema simple de manejo de sesiones para que los usuarios registrados puedan iniciar sesión y cerrar sesión de manera segura.
+Este proyecto te permitirá aplicar los conceptos de asincronía, manejo de eventos y seguridad en el contexto práctico de un sistema de registro de usuarios.
+
+
+/////////////////////////////////////////////////////////////////////////
+
+Detalles Adicionales para el Proyecto Práctico:
+6. Express.js (Opcional pero Recomendado):
+Utiliza Express.js para simplificar la creación del servidor y gestionar las rutas.
+7. Frontend Interactivo:
+Mejora la experiencia del usuario implementando interactividad en el frontend con JavaScript (por ejemplo, validaciones en tiempo real).
+8. Persistencia de Datos:
+En lugar de simplemente escribir los datos en archivos, considera utilizar una base de datos como MongoDB o SQLite para almacenar y recuperar la información de usuario de manera más eficiente.
+9. Encriptación de Sesiones:
+Para mejorar la seguridad, puedes considerar el uso de cookies seguras y firmadas para gestionar las sesiones de usuario.
+10. Mejora de Diseño:
+Aplica estilos CSS o utiliza un marco de trabajo como Bootstrap para mejorar el diseño y la presentación del formulario y la interfaz de usuario.
+11. Mensajes de Retroalimentación:
+Proporciona mensajes claros de retroalimentación al usuario en caso de éxito o error durante el proceso de registro o inicio de sesión.
+12. Internacionalización:
+Si deseas ir un paso más allá, considera la posibilidad de implementar la internacionalización (i18n) para admitir múltiples idiomas en tu aplicación.
+Este proyecto puede escalarse según tus habilidades y preferencias. Comienza con los puntos básicos y luego agrega funcionalidades adicionales según tu interés y nivel de experiencia. ¡Buena suerte con tu proyecto de registro de usuarios en Node.js!
+
+
+
+///////////////////////////////////////////////////////////////////////
+
+
+Una estructura básica y algunas pautas que puedes seguir para implementar el proyecto:
+
+### Estructura Básica del Proyecto:
+
+1. **Crear una estructura de carpetas:**
+   - `proyecto_registro_usuarios/`
+     - `public/` (para archivos estáticos como CSS y JavaScript)
+     - `views/` (para archivos HTML)
+     - `routes/` (para manejar rutas)
+     - `models/` (si estás utilizando una base de datos)
+     - `controllers/` (lógica de controladores)
+     - `config/` (configuración del servidor y otros)
+     - `app.js` (archivo principal)
+
+2. **Configuración de Express:**
+   - En `app.js`, configura Express, define rutas y utiliza middleware para procesar datos del formulario.
+
+3. **Formulario HTML:**
+   - Crea un formulario en `views/` para recopilar la información del usuario.
+
+4. **Manejo de Sesiones:**
+   - Usa una biblioteca como `express-session` para gestionar sesiones de usuario.
+
+5. **Validación de Datos:**
+   - Implementa lógica de validación en el servidor para garantizar que los datos del formulario sean correctos.
+
+6. **Almacenamiento Seguro de Contraseñas:**
+   - Utiliza la biblioteca `bcrypt` para cifrar las contraseñas antes de almacenarlas.
+
+7. **Persistencia de Datos:**
+   - Decide si deseas utilizar un sistema de archivos para almacenar datos de usuario o si prefieres una base de datos (por ejemplo, MongoDB con Mongoose).
+
+8. **Interactividad en el Frontend:**
+   - Mejora la experiencia del usuario con interactividad en el frontend utilizando JavaScript.
+
+Recuerda que este es solo un esquema básico. A medida que avanzas, puedes expandir el proyecto incorporando características adicionales y mejorando la seguridad y la usabilidad. ¡Buena suerte!
+
+
+
+
+/////// DEPENDENCIAS A USAR VIA NPM:
+
+npm install express body-parser express-session ejs
+npm install express-validator
+
+
+
+/////// Configuracion en la cabeza donde se hacen los require e imports:
+
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+const session = require('express-session');
+const crypto = require('crypto');
+const { body, validationResult } = require('express-validator');
+const fs = require('fs/promises');
