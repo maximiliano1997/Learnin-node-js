@@ -1,0 +1,137 @@
+<%- include('templates/cabecera', {tituloWeb: 'Detalle Mascota' }) %>
+
+    <div class="flex-column justify-center align-center">
+        <h1>Detalle Mascota</h1>
+        <% if (error) { %>
+            <p>
+                <%= mensaje %>
+            </p>
+            <a href="/mascotas"
+                class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Volver
+                a Mascotas</a>
+            <% } %>
+
+                <% if (!error) { %>
+
+                    <div class="flex justify-center w-full">
+                        <form id="formularioEditar" data-id="<%= mascota.id %>">
+                            <input type="text" class="border-2 form-contorl my-2" name="nombre"
+                                value="<%= mascota.nombre %>" id="inputNombre">
+                            <input type="text" class="border-2  form-contorl my-2" name="descripcion"
+                                value="<%= mascota.descripcion %>" id="inputDescripcion">
+
+                            <button type="submit"
+                                class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Editar</button>
+
+                        </form>
+
+                        <td class="px-6 py-4">
+                            <button
+                                class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
+                                id="btnEliminar" data-id="<%= mascota.id %>">Eliminar</button>
+                        </td>
+                    </div>
+
+                    <!-- <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">
+                                    #id
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Nombre
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Descripcion
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Accion
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <%= mascota.id %>
+                                </th>
+                                <td class="px-6 py-4">
+                                    <%= mascota.nombre %>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <%= mascota.descripcion %>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <button id="btnEliminar" data-id="<%= mascota.id %>">Eliminar</button>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table> -->
+
+                    <% } %>
+    </div>
+
+    <%- include('templates/footer') %>
+
+        <script>
+            const btnEliminar = document.querySelector('#btnEliminar')
+
+            btnEliminar.addEventListener('click', async () => {
+                console.log('click dado')
+                const id = btnEliminar.dataset.id
+                console.log(id)
+                try {
+                    const data = await fetch(`/mascotas/${id}`, {
+                        method: 'delete'
+                    })
+                    const res = await data.json()
+
+                    if (res.estado) {
+                        window.location.href = '/mascotas'
+                    } else {
+                        console.log(res)
+                    }
+
+                    console.log(res)
+                } catch (error) {
+                    console.log(error)
+                }
+            })
+
+            const formularioEditar = document.querySelector('#formularioEditar')
+
+            formularioEditar.addEventListener('submit', async (e) => {
+                e.preventDefault()
+                console.log('formularioEditar')
+
+                const nombre = formularioEditar.elements['nombre'].value;
+                const descripcion = document.querySelector('#inputDescripcion').value
+                const id = formularioEditar.dataset.id
+
+                console.log(nombre, descripcion, id)
+
+                try {
+                    const data = await fetch(`/mascotas/${id}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ nombre, descripcion })
+                    });
+
+                    const res = await data.json()
+                    console.log(res)
+
+                    if (res.estado) {
+                        window.location.href = '/mascotas'
+                    } else {
+                        console.log(res)
+                    }
+                } catch (error) {
+                    console.log(error)
+                }
+            })
+        </script>

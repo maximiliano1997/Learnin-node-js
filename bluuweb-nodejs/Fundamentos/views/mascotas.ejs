@@ -1,0 +1,55 @@
+<%- include('templates/cabecera',{tituloWeb: 'Home Index' }) %>
+
+    <h1>CRUD Mongo</h1>
+
+    <a href="/mascotas/crear"
+        class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Crear
+        nueva Mascota</a>
+
+
+    <div class="container flex justify-center m-auto p-auto">
+        <div class="relative overflow-x-auto">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            #id
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Nombre
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Descripcion
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Accion
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (arrayMascotas.length> 0) { %>
+                        <% arrayMascotas.forEach(mascota=> { %>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <%= mascota.id %>
+                                </th>
+                                <td class="px-6 py-4">
+                                    <%= mascota.nombre %>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <%= mascota.descripcion %>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <a href="/mascotas/<%= mascota.id %>">Editar</a>
+                                </td>
+                            </tr>
+                            <% }) %>
+                                <% } %>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <%- include('templates/footer') %>
